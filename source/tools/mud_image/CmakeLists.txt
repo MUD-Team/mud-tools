@@ -1,0 +1,9 @@
+
+
+set (MUD_IMAGE_SOURCE main.cpp)
+
+add_executable(mud-image ${MUD_IMAGE_SOURCE})
+set_target_properties(mud-image PROPERTIES DEBUG_POSTFIX "_DEBUG")
+set_target_properties(mud-image PROPERTIES RELWITHDEBINFO_POSTFIX "_RELWITHDEBINFO")
+
+target_link_libraries(mud-image PRIVATE lodepng libimagequant Poco::Util Poco::Foundation)
